@@ -1,0 +1,36 @@
+.leaderboard-section {
+
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin-top: -40px;
+
+	h1 {
+
+		font-size: 3rem;
+		background: blue;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+
+	}
+
+
+}
+
+.table-container {
+
+	height: 17rem;
+	background: rgb(134, 134, 198);
+	border-radius: 10px;
+
+	overflow-x: hidden;
+}
+
+.sub-leaderboard {
+
+	width: 180px;
+	text-align: center;
+}
