@@ -4,6 +4,8 @@ const port=process.env.PORT || 3000;
 const cors=require("cors")
 const dot=require("dotenv");
 dot.config();
+const path=require("path");
+
 
 const db=require("./utils/db");
 const cookieParser=require('cookie-parser')
@@ -31,6 +33,8 @@ app.use(cors({
 app.use(cookieParser())
 
 
+
+
 app.use("/api",authRouter);
 app.use("/api",expenseRouter);
 app.use("/api",premiumRouter);
@@ -38,6 +42,10 @@ app.use("/api",leaderboardRouter);
 app.use("/api",passwordRouter);
 app.use("/api",reportRouter);
 
+
+	const buildpath=(path.join(__dirname,"../client/dist"));
+
+app.use(express.static(buildpath));
 
 app.get("/api/getkey",(req,res)=>{
 	res.status(200).json({key: "process.env.RZP_KEY_ID"})
