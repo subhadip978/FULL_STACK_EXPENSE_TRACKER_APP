@@ -44,6 +44,8 @@ app.use("/api",reportRouter);
 
 
 	const buildpath=(path.join(__dirname,"../client/dist"));
+	console.log(buildpath);
+	console.log("hi");
 
 app.use(express.static(buildpath));
 
